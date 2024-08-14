@@ -1,0 +1,22 @@
+$white: #fff;
+$black: #000;
+$blue: #5932EA;
+$green-1: #008767;
+$green-2: #00b087;
+$green-3: #16C098;
+$gray-1: #9197b3;
+$gray-2: #292d32;
+$gray-3: #b5b7c0;
+$gray-4: #eeeeee;
+$gray-5: #7E7E7E;
+$gray-6: #f9fbff;
+$gray-7: #757575;
+$gray-8: #404B52;
+$gray-9: #838383;
+$gray-10: #F5F5F5;
+$red-1: #DF0404;
+$red-2: #FFC5C5;
+
+@function transparent-color($color, $opacity) {
+  @return rgba($color, $opacity);
+}

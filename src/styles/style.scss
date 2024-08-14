@@ -1,0 +1,25 @@
+@import './colors.scss';
+@import "fonts";
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $gray-6;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $gray-1;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}

@@ -1,0 +1,181 @@
+@import "../../styles/colors";
+
+.dashboardMainContainer {
+  background-color: $gray-6;
+  position: relative;
+  display: flex;
+
+  .dashboardContent {
+    box-sizing: border-box;
+    padding: 41px 95px 41px 71px;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+
+    @media (width <= 1100px) {
+      width: 100%;
+      padding-inline: 20px;
+    }
+
+    > span {
+      font-weight: 500;
+      font-size: 24px;
+      color: $black;
+    }
+
+    > svg {
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      right: 25px;
+      cursor: pointer;
+      fill: $gray-2;
+      display: none;
+
+      @media (width <= 1100px) {
+        display: inline-block;
+      }
+    }
+
+    .sidebarMobile {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      max-width: calc(100% - 70px);
+      height: 100%;
+      transition: left 0.3s ease;
+      z-index: 100;
+      border-right: 1px solid $gray-4;
+      display: none;
+
+      @media (width <= 1100px) {
+        display: inline-block;
+      }
+
+      > div > aside {
+        @media (width <= 1100px) {
+          display: inline-block;
+        }
+      }
+    }
+
+    .sidebarMobileOpen {
+      left: 0;
+    }
+
+    .allCustomersMainContainer {
+      margin-top: 51px;
+      background-color: $white;
+      border-radius: 30px;
+
+      .allCustomersHeader {
+        box-sizing: border-box;
+        padding: 30px 38px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (width <= 650px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+
+          &:first-child {
+
+            @media (width <= 650px) {
+              align-items: center;
+            }
+
+            > span:first-child {
+              font-size: 22px;
+              letter-spacing: -0.16px;
+              font-weight: 600;
+              color: $black;
+              margin-bottom: 7px;
+            }
+
+            > span:last-child {
+              font-size: 14px;
+              letter-spacing: -0.16px;
+              color: $green-3;
+            }
+          }
+        }
+      }
+
+      .allCustomersContainer {
+        box-sizing: border-box;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+          height: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: $white;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $gray-3;
+          border-radius:10px;
+        }
+
+        .customerInfoTable {
+          min-width: 900px;
+
+          > div {
+            &:first-child {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              margin: 40px 0 14px;
+              color: $gray-3;
+              border: none;
+              box-sizing: border-box;
+              padding: 0 40px 14px 40px;
+              border-bottom: 1px solid $gray-4;
+            }
+
+            &:nth-child(2) {
+              box-sizing: border-box;
+              padding-inline: 40px;
+            }
+          }
+        }
+      }
+
+      > div:last-child {
+        padding-bottom: 41px;
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding-inline: 40px;
+
+        @media (width <= 650px) {
+          flex-direction: column;
+          align-items: center;
+          padding-inline: 15px;
+        }
+
+        > span  {
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: -0.16px;
+          color: $gray-3;
+
+          @media (width <= 650px) {
+            margin-bottom: 20px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+

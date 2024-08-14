@@ -1,0 +1,81 @@
+@import "../../styles/colors";
+
+.navMenuMainContainer {
+  background-color: $white;
+
+  .sideBar {
+    width: 300px;
+    height: 100vh;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 36px 28px 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-3;
+    }
+
+    @media (width <= 1100px) {
+      display: none;
+    }
+
+    > div {
+      > svg {
+        height: 36px;
+        width: 250px;
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-bottom: 70px;
+
+      > button:is(:nth-child(2), :nth-child(5), :nth-child(6)) > svg:first-child {
+        stroke: transparent !important;
+      }
+    }
+
+    .customerProfile {
+      display: flex;
+      align-items: center;
+
+      > img {
+        width: 42px;
+        height: 42px;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+
+        > span:first-child {
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 0.16px;
+          color: $black;
+        }
+
+        > span:last-child {
+          font-size: 12px;
+          letter-spacing: 0.16px;
+          color: $gray-7;
+        }
+      }
+    }
+  }
+}
+

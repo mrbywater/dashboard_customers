@@ -1,0 +1,42 @@
+@import "../../../styles/colors";
+
+.searchInputContainer {
+  height: 38px;
+  width: 216px;
+  max-width: 100%;
+  position: relative;
+  margin: 10px 53px 0 0 ;
+
+  @media (width <= 650px) {
+    width: 90%;
+  }
+
+  > svg {
+    position: absolute;
+    stroke: $gray-7;
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    top: 7px
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: $gray-6;
+    border-radius: 10px;
+    padding-left: 40px;
+    color: $black;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.16px;
+
+    &::placeholder {
+      color: $gray-3;
+    }
+
+    &:focus {
+      outline: 1px solid $gray-7;
+    }
+  }
+}
